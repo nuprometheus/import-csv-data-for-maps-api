@@ -59,7 +59,7 @@ $(() => {
       store("fields", contents.fields);
 
       $("#csvFileLabel").text(`File: ${filename}`);
-      $("#jsonFileLabel").text("Choose JSON file...");
+      $("#jsonFileLabel").text("Elija un archivo JSON...");
       $("#jsonFileInput").val("");
       $("#importButton").prop("disabled", false);
 
@@ -77,7 +77,7 @@ $(() => {
       store("route", contents.route);
 
       $("#jsonFileLabel").text(`File: ${filename}`);
-      $("#csvFileLabel").text("Choose CSV file...");
+      $("#csvFileLabel").text("Elija un archivo CSV...");
       $("#csvFileInput").val("");
       $("#importButton").prop("disabled", false);
     });

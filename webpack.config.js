@@ -23,7 +23,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Import CSV Data for Google Maps API",
+      title: "Importe el CSV para procesar en Google Maps",
       template: "./src/index.html",
       apiKey: process.env.API_KEY,
       minify: {

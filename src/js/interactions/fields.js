@@ -8,11 +8,11 @@ export const populateGeocodingFields = () => {
   store("config", {
     fields: {
       geocoding: {
-        address: fields[0],
-        city: fields[0],
-        province: fields[0],
-        postalCode: fields[0],
-        country: fields[0],
+        dirección: fields[0],
+        ciudad: fields[0],
+        departamento: fields[0],
+        codigoPostal: fields[0],
+        país: fields[0],
       },
       data: []
     },
