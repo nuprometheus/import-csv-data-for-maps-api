@@ -11,8 +11,13 @@ export const populateGeocodingFields = () => {
         address: fields[0],
         city: fields[0],
         province: fields[0],
+<<<<<<< Updated upstream
         postalCode: fields[0],
         country: fields[0],
+=======
+        postal_code: fields[0],
+        país: fields[0],
+>>>>>>> Stashed changes
       },
       data: []
     },
