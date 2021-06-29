@@ -64,6 +64,32 @@ export const createMap = () => {
   return map;
 };
 
+export const createHeatMap = () => {
+    const data = retrieve("data");
+    let mapOptions = {
+        mapTypeControl: false,
+        rotateControl: false,
+        zoom: 11,
+        mapTypeId: "satellite",
+    };
+    let bounds = new google.maps.LatLngBounds();
+    let resetControl = document.createElement("div");
+    createResetControl(resetControl);
+    resetControl.index = 1;
+    let map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    let dataLatLng = data.map((d, i) => {
+        bounds.extend(d.latLng);
+        return new google.maps.LatLng(d.latLng.lat, d.latLng.lng)
+    });
+    map.fitBounds(bounds);
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(resetControl);
+    var heatmap = new google.maps.visualization.HeatmapLayer({
+        data: dataLatLng,
+        map: map
+    });
+    return heatmap;
+};
+
 const createResetControl = (div) => {
   let resetControl = document.createElement("div");
   resetControl.className = "map-button";
